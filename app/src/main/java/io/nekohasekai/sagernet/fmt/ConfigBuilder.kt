@@ -791,6 +791,7 @@ fun buildV2RayConfig(
                         val pluginId = when (bean) {
                             is HysteriaBean -> "hysteria-plugin"
                             is WireGuardBean -> "wireguard-plugin"
+                            is NaiveBean -> "naive-plugin"
                             else -> ""
                         }
                         Plugins.getPlugin(pluginId)?.apply {
